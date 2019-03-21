@@ -85,15 +85,16 @@ Zusätzlich instalierte folgende 3 vorgegebenen Extensions:
 Sie ermöglichen das einfachere bearbeiten von dieser Dokumentation und dem Vagrant file.
 
 Damit beim Dateien mit den Endungen .git / .svn / .hg / .vagrant / .DS_store nicht in das Repository hinaufgeladen werden, habe ich im setting.json file folgenden code eingefügt:
-   // Konfiguriert die Globmuster zum Ausschließen von Dateien und Ordnern.
- "files.exclude": {
-   "**/.git": true,
-   "**/.svn": true,
-   "**/.hg": true,
-   "**/.vagrant": true,
-   "**/.DS_Store": true
+
+   // Konfiguriert die Globmuster zum Ausschließen von Dateien und Ordnern.  
+ "files.exclude": {  
+   "**/.git": true,  
+   "**/.svn": true,  
+   "**/.hg": true,  
+   "**/.vagrant": true,  
+   "**/.DS_Store": true  
  },  
- Allerdings musste ich feststellen, dass der in der Anleitung beschriebene Abschnitt nicht existiert. 
+
 
 
 ## Virtualbox  
