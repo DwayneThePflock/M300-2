@@ -1,42 +1,46 @@
 # Dokumentation LB 1
 **Zum Modul 300 von Marius Rutz**
 ***
+![M300](pictures/index.png)  
 ## Inhaltsverzeichnis
 
 * Persönlicher Wissensstand
 * Toolumgebung
 * Ubuntu mit Apacheserver
-  
+
 ## Persönlicher Wissensstand
 
 **Linux**  
 In Modulen an der TBZ spärlich genutzt. Auf privaten Computern verwende ich Ubuntu.
-Im Geschäfft verwenden wir Windows.
+Im Geschäfft verwenden wir Windows.  
 **Virtualisierung**  
-VMware im Geschäfft und in der Schule verwendet. Aktuell den ÜK zum Thema absolviert. In der Schule in diversen Modulen genutzt.
+VMware im Geschäfft und in der Schule verwendet. Aktuell den ÜK zum Thema absolviert. In der Schule in diversen Modulen genutzt.  
 **Vagrant**  
 Noch nie benutzt vor M300.  
+**Versionsverwaltung / Git**  
+Keine.  
 **Systemsicherheit**  
-Wenig Erfahrung im konfigurieren von Firewalls. 
+Wenig Erfahrung im Konfigurieren von Firewalls. 
+
 ## Lernumgebung
 **Git**  
 Gemäss Anleitung im M300 Reppository:  
-*Github*
+*Github*  
   1. Auf www.github.com ein Benutzerkonto erstellen (Angabe von Username, E-Mail und Passwort)
   2. E-Mail zur Verifizierung des Kontos bestätigen und anschliessend auf GitHub anmelden
 
 *Repository*
-1. New Repository auswählen
-2. Name: M300
-3. Public
-4. Initialize this repository with a README auswählen
-5. Create a repository
+  1. New Repository auswählen
+  2. Name: M300
+  3. Public
+  4. Initialize this repository with a README auswählen
+  5. Create a repository
 
 *Git Client*  
-Git-2.20.1-64-bit.exe als Administrator ausführen.  
-Standardwerte wurden während der Installation verwenden.  
-Konfiguration mit:  
- $ git config --global user.name "<Payreno>"
+1. Git-2.20.1-64-bit.exe als Administrator ausführen.  
+2. Standardwerte wurden während der Installation verwenden.  
+3. Öffnen und Konfiguration mit:  
+ $ git config --global user.name "Payreno"  
  $ git config --global user.email "<marius.rutz@protonmail.ch>"  
 
 *SSH Key*  
@@ -59,17 +63,29 @@ Meinrepo:
   * git pull --> Um zu aktualisieren  
   * git status --> Um  Status der lokalen Kopie anzuzeigen  
 
-
-
-
-
 **Virtualbox**  
+Virtualbox ist eine Opensource Virtualisierungssoftware.  
+Für die Verwendung im Modul reicht die Installation mit Standardwerten.
+
 **Vagrant**  
+Vagrant ermöglicht es, dass ich in Virtualbox automatisiert eine VM mit Service installieren kann.  
+Für die Verwendung im Modul reicht die Installation mit Standardwerten.  
+
 **Visualstudio Code**  
+Visualstudio Code ist ein Editor von Microsoft. Es ist möglich ein Repository darin zu öffnen und Änderungen gleich zu pushen.  
+Für die Verwendung im Modul reicht die Installation mit Standardwerten.  
+Zusätzlich instalierte folgende 3 vorgegebenen Extensions:
+
+* Markdown All in One
+* Vagrant Extension
+* vscode-pdf Extension  
+
+Sie ermöglichen das einfachere bearbeiten von dieser Dokumentation und dem Vagrant file.
 
 
-## Visualstudio-Code
+## Virtualbox  
 
-## Ubuntu mit Apacheserver
+Vagrant
 
-#PIHole
+Ubuntu mit Apacheserver
+
