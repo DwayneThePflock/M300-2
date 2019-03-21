@@ -44,12 +44,14 @@ Gemäss Anleitung im M300 Reppository:
  $ git config --global user.email "<marius.rutz@protonmail.ch>"  
 
 *SSH Key*  
-ssh-keygen -t rsa -b 4096 -C "marius.rutz@protonmail.ch"  
-Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]  
-Enter passphrase (empty for no passphrase): []  
-Enter same passphrase again: [] 
-*%HOME%/.ssh/id_rsa.pub mit Notepad öffnen und Schlüssel kopieren  
-Auf Github unter Settings->SSH and GPG keys angeben
+1. Im Terminal:
+   * ssh-keygen -t rsa -b 4096 -C "marius.rutz@protonmail.ch"  
+   * Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]  
+   * Enter passphrase (empty for no passphrase): []  
+   * Enter same passphrase again: []
+
+2. *%HOME%/.ssh/id_rsa.pub mit Notepad öffnen und Schlüssel kopieren  
+3. Auf Github unter Settings->SSH and GPG keys angeben
 
 *Repository klonen*  
 Modulrepo:  
@@ -82,10 +84,24 @@ Zusätzlich instalierte folgende 3 vorgegebenen Extensions:
 
 Sie ermöglichen das einfachere bearbeiten von dieser Dokumentation und dem Vagrant file.
 
+Damit beim Dateien mit den Endungen .git / .svn / .hg / .vagrant / .DS_store nicht in das Repository hinaufgeladen werden, habe ich im setting.json file folgenden code eingefügt:
+   // Konfiguriert die Globmuster zum Ausschließen von Dateien und Ordnern.
+ "files.exclude": {
+   "**/.git": true,
+   "**/.svn": true,
+   "**/.hg": true,
+   "**/.vagrant": true,
+   "**/.DS_Store": true
+ },  
+ Allerdings musste ich feststellen, dass der in der Anleitung beschriebene Abschnitt nicht existiert. 
+
 
 ## Virtualbox  
 
 Vagrant
 
 Ubuntu mit Apacheserver
+
+## Vagrant
+Folgende Befehle werden verwendet um Vagrant über die Kommandozeile zu steuern:
 
