@@ -248,7 +248,7 @@ Zu spät angefangen habe ich mit der Mark Down Dokumentation. Zu Beginn des Modu
 ## Quellen
 
 * <https://github.com/mc-b/M300>  
-* https://bscw.tbz.ch/bscw/bscw.cgi/28993547
+* <https://bscw.tbz.ch/bscw/bscw.cgi/20887767>
 
 ***  
 ***
