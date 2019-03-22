@@ -2,8 +2,6 @@
 ***
 # Dokumentation LB 1
 **Zum Modul 300 von Marius Rutz**
-***
-![M300](pictures/index)
 ***  
 ## Inhaltsverzeichnis
 
