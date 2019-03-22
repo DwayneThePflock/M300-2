@@ -1,13 +1,17 @@
+***  
+***
 # Dokumentation LB 1
 **Zum Modul 300 von Marius Rutz**
 ***
-![M300](pictures/index.png)  
+![M300](pictures/index.png)
+***  
 ## Inhaltsverzeichnis
 
 * Persönlicher Wissensstand
 * Toolumgebung
 * Ubuntu mit Apacheserver
 
+***
 ## Persönlicher Wissensstand
 
 **Linux**  
@@ -22,6 +26,7 @@ Keine.
 **Systemsicherheit**  
 Wenig Erfahrung im Konfigurieren von Firewalls. 
 
+***
 ## Lernumgebung
 **Git**  
 Gemäss Anleitung im M300 Reppository:  
@@ -40,30 +45,30 @@ Gemäss Anleitung im M300 Reppository:
 1. Git-2.20.1-64-bit.exe als Administrator ausführen.  
 2. Standardwerte wurden während der Installation verwenden.  
 3. Öffnen und Konfiguration mit:  
- $ git config --global user.name "Payreno"  
- $ git config --global user.email "<marius.rutz@protonmail.ch>"  
+ >$ git config --global user.name "<Payreno>"  
+ >$ git config --global user.email "<marius.rutz@protonmail.ch>"  
 
 *SSH Key*  
-1. Im Terminal:
-   * ssh-keygen -t rsa -b 4096 -C "marius.rutz@protonmail.ch"  
-   * Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]  
-   * Enter passphrase (empty for no passphrase): []  
-   * Enter same passphrase again: []
+1. Im Terminal:  
+  >ssh-keygen -t rsa -b 4096 -C "marius.rutz@protonmail.ch"  
+  >Enter a file in which to save the key (~/.ssh/id_rsa): [Press enter]  
+  >Enter passphrase (empty for no passphrase): []  
+  >Enter same passphrase again: []
 
 2. *%HOME%/.ssh/id_rsa.pub mit Notepad öffnen und Schlüssel kopieren  
 3. Auf Github unter Settings->SSH and GPG keys angeben
 
 *Repository klonen*  
 Modulrepo:  
-  * git clone https://github.com/mc-b/M300  
-  * cd M300  
-  * git pull  
-  * git status
+  > git clone https://github.com/mc-b/M300  
+  > cd M300  
+  > git pull  
+  > git status
      
 Meinrepo:  
-  * git clone git@github.com:Payreno/M300.git  
-  * git pull --> Um zu aktualisieren  
-  * git status --> Um  Status der lokalen Kopie anzuzeigen  
+  >git clone git@github.com:Payreno/M300.git  
+  > git pull --> Um zu aktualisieren  
+  > git status --> Um  Status der lokalen Kopie anzuzeigen  
 
 **Virtualbox**  
 Virtualbox ist eine Opensource Virtualisierungssoftware.  
@@ -72,6 +77,27 @@ Für die Verwendung im Modul reicht die Installation mit Standardwerten.
 **Vagrant**  
 Vagrant ermöglicht es, dass ich in Virtualbox automatisiert eine VM mit Service installieren kann.  
 Für die Verwendung im Modul reicht die Installation mit Standardwerten.  
+
+*Nützliche Befehle:*  
+
+Umgebung initialisieren und Vagrantfile erstellen  
+>vagrant init  
+
+VM erzeugen und konfigurieren nach Vagrantfile  
+>vagrant up
+
+SSH Verbindung  
+>vagrant ssh  
+
+Status anzeigen  
+>vagrant status  
+
+VM stoppen
+>vagrant halt  
+
+VM zerstören  
+>vagrant destroy
+
 
 **Visualstudio Code**  
 Visualstudio Code ist ein Editor von Microsoft. Es ist möglich ein Repository darin zu öffnen und Änderungen gleich zu pushen.  
@@ -86,25 +112,28 @@ Sie ermöglichen das einfachere bearbeiten von dieser Dokumentation und dem Vagr
 
 Damit beim Dateien mit den Endungen .git / .svn / .hg / .vagrant / .DS_store nicht in das Repository hinaufgeladen werden, habe ich im setting.json file folgenden code eingefügt:
 
-   // Konfiguriert die Globmuster zum Ausschließen von Dateien und Ordnern.  
- "files.exclude": {  
-   "**/.git": true,  
-   "**/.svn": true,  
-   "**/.hg": true,  
-   "**/.vagrant": true,  
-   "**/.DS_Store": true  
- },  
+>   // Konfiguriert die Globmuster zum Ausschließen von Dateien und Ordnern.  
+> "files.exclude": {  
+>   "**/.git": true,  
+>   "**/.svn": true,  
+>   "**/.hg": true,  
+>   "**/.vagrant": true,  
+>   "**/.DS_Store": true  
+> },  
 
+***
 ##  Vorgefertigte VM mit Vagrant aufsetzen
 
 Aus dem M300 Repository, setzte ich automatisiert eine Ubuntu VM mit Apache2 auf.
 Dazu musste ich nur in das Verzeichnis /M300/vagrant/web wechseln und "vagrant up" ausführen. 
 Die VM wird daraufhin installiert und in Virtualbox angezeigt.
 
+***
 ## Vagrant Ubuntu VM mit Firewall und Webserver
 
-**Netzwerkplan**
-![M300](pictures/netzwerk.png)
+**Netzwerkplan**  
+
+![M300](pictures/netzwerk)
 
 **Konfiguration**  
 In der Kopie von meinem Repository, erstellte ich mit vagrant init ein Vagrantfile.
@@ -144,7 +173,6 @@ Da ein Neustart unerwünscht ist, wird die Firewall manuell eingeschaltet. yes Y
   >end  
 
 **Sicherheit**  
-
 Der Zugriff über SSH ist standardmässig möglich.
 Beim automatisierten Aufsetzen, wird ein neuer SSH-Key generiert.  
 Die Firewall ist erlaubt den Zugriff über SSH und HTTP. Zusätzlich habe ich festegelegt, dass nur IPs aus dem Subnetz 10.71.13.0 zugreifen dürfen.
@@ -153,23 +181,67 @@ Die Firewall ist erlaubt den Zugriff über SSH und HTTP. Zusätzlich habe ich fe
 Die VM kann mit vagrant up gestartet werden, wenn man die Konsole im Ordner mit dem Vagrantfile ausführt.  
 Danach wird durch vagrant ssh eine Verbindung hergestellt.
 
+**Testen**  
+*Aufsetzen*
+Im Ordner Vagrant folgenden Befehl ausführen und die VM wird verbunden.
+>vagrant up  
+
+![M300](pictures/virtualbox)  
+
+Wie man sieht wird die VM mit 4 GB Ram in Virtualbox angezeigt.  
+
+*Verbinden*
+>vagrant ssh  
+
+![M300](pictures/SSH)  
+Die Verbindung funktioniert.
+
+*Firewall*  
+
+>sufo ufw status  
+
+![M300](pictures/ufw)  
+Die Firewall ist aktive und die gewünschten Ports sind geöffnet.
+
+*Apache2*
+
+>service apache2 status  
+
+![M300](pictures/apache)  
+Der Service läuft.  
+![M300](pictures/index)  
+Vom Client ist der Webserver über HTTP erreichbar und zeigt das im Vagrant Ordner abgelegte index.html file an.
+***
 ## Wissenzuwachs
 
 **Linux**  
 Ich habe die Tool-Umgebung auf Ubuntu Linux installiert und verwendet.
 Dadurch konnte ich mich üben im  navigieren über die Konsole.
 Die Befehle zur Installation von Software kannte ich bereits.  
+
 **Virtualisierung**  
 Die verwendete Virtualisierungssoftware und konfiguration kannte ich .bereits.  
+
 **Vagrant**  
 Ich lernte eine Vagrantumgebung aufzusetzen und ein Vagrantfile zu konfigurieren, aus welchem ich dann automatisiert eine VM aufsetzen lassen kann.    
+
 **Versionsverwaltung / Git**  
-Ich lernte ein Repository zu Erstellen, Klonen und lokal gemachte Änderungen zu commiten und pushen
+Ich lernte ein Repository zu Erstellen, Klonen und lokal gemachte Änderungen zu commiten und pushen.
+
 **Systemsicherheit**  
 Ich konnte per SSH die Verbindung mit der VM herstellen.  
-Auf der Firewall konnte ich spezifische Ports definieren um gewünschte Services zuzulassen.  
+Auf der Firewall konnte ich spezifische Ports definieren um gewünschte Services zuzulassen.
+***  
 ## Reflexion
 
 Zu Beginn hatte ich Schwierigkeiten mit dem Verständniss der Funktionsweise von Vagrant. Um das Projekt umzusetzen musste ich zuerst Realisieren, wie Vagrantfile und Box zusammenspielen. Um so mehr Freude bereitete es mir das Vagrantfile dann nach meinen Wünschen zu konfigurieren und zu sehen wie die VM automatisiert aufgesetzt wird.
 Leider blieb so nicht genug Zeit um eine Komplexere Konfiguration umzusetzen. Bei der nächsten LB werde ich dieses Problem nicht mehr haben und somit hoffentlich mehr Zeit mit der Konfiguration verbrinden können.  
 Zu spät angefangen habe ich mit der Mark Down Dokumentation. Zu Beginn des Moduls hatte ich das Aufsetzen der Tool-Umgebung in Google-Docs dokumentiert. Diese Dokumentation musste ich dann in Mark Down nochmals machen. Hätte ich zu Beginn mit Mark Down gearbeitet, wäre mir diese Arbeit erspart geblieben.
+
+##Quellen
+
+* <https://github.com/mc-b/M300>  
+* https://bscw.tbz.ch/bscw/bscw.cgi/28993547
+
+***  
+***
