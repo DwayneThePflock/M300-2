@@ -5,13 +5,15 @@
 ***  
 ## Inhaltsverzeichnis
 
-* Persönlicher Wissensstand
-* Lernumgebung
-* Vorgefertige VM mit Vagrant aufsetzen
-* Vagrant Ubuntu VM mit Firewall und Webserver
-* Wissenszuwachs
-* Reflexion
-* Quellen
+- [Dokumentation LB 1](#dokumentation-lb-1)
+  - [Inhaltsverzeichnis](#inhaltsverzeichnis)
+  - [Persönlicher Wissensstand](#pers%C3%B6nlicher-wissensstand)
+  - [Lernumgebung](#lernumgebung)
+  - [Vorgefertigte VM mit Vagrant aufsetzen](#vorgefertigte-vm-mit-vagrant-aufsetzen)
+  - [Vagrant Ubuntu VM mit Firewall und Webserver](#vagrant-ubuntu-vm-mit-firewall-und-webserver)
+  - [Wissenzuwachs](#wissenzuwachs)
+  - [Reflexion](#reflexion)
+  - [Quellen](#quellen)
 
 ***
 ## Persönlicher Wissensstand
