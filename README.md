@@ -6,7 +6,7 @@
 ## Inhaltsverzeichnis
 
 * Persönlicher Wissensstand
-* Toolumgebung
+* Lernumgebung
 * Vorgefertige VM mit Vagrant aufsetzen
 * Vagrant Ubuntu VM mit Firewall und Webserver
 * Wissenszuwachs
@@ -27,6 +27,8 @@ Noch nie benutzt vor M300.
 Keine.  
 **Systemsicherheit**  
 Wenig Erfahrung im Konfigurieren von Firewalls. 
+**Mark Down**
+Keine
 
 ***
 ## Lernumgebung
@@ -128,7 +130,8 @@ Damit beim Dateien mit den Endungen .git / .svn / .hg / .vagrant / .DS_store nic
 
 Aus dem M300 Repository, setzte ich automatisiert eine Ubuntu VM mit Apache2 auf.
 Dazu musste ich nur in das Verzeichnis /M300/vagrant/web wechseln und "vagrant up" ausführen. 
-Die VM wird daraufhin installiert und in Virtualbox angezeigt.
+Die VM wird daraufhin installiert und in Virtualbox angezeigt.  
+![M300](pictures/web)
 
 ***
 ## Vagrant Ubuntu VM mit Firewall und Webserver
@@ -232,7 +235,9 @@ Ich lernte ein Repository zu Erstellen, Klonen und lokal gemachte Änderungen zu
 
 **Systemsicherheit**  
 Ich konnte per SSH die Verbindung mit der VM herstellen.  
-Auf der Firewall konnte ich spezifische Ports definieren um gewünschte Services zuzulassen.
+Auf der Firewall konnte ich spezifische Ports definieren um gewünschte Services zuzulassen.  
+**Mark Down**  
+Ich lernte eine Dokumentation mit Mark Down zu erstellen.
 ***  
 ## Reflexion
 
